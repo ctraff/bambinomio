@@ -312,7 +312,7 @@
     .gallery-cell 
     {
         width: 100%;
-        height: 500px;
+        height: 22em;
         display: -webkit-box;
         display: -webkit-flex;
         display: flex;
@@ -339,7 +339,7 @@
         display: block;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
         border-radius: 30px;
         border: 1px solid #D0D0D0;
     }
@@ -423,7 +423,7 @@
         color: white;
         padding: 10px;
         border-radius: 10px;
-        width: 75px;
+        width: 3.125em;
     }
 
     .qtyM 
@@ -440,7 +440,7 @@
         border: 0;
         padding: 5px;
         border-radius: 10px;
-        width: 150px;
+        width: 4.6875em;
         margin-left: 10px;
     }
 
@@ -522,7 +522,11 @@
     {
         display: flex;
         justify-content: center;
-        padding: 20px;
+    }
+
+    .sizeChartM img 
+    {
+        height: 21em;
     }
 
     /* FAQ */
@@ -532,7 +536,7 @@
         margin-top: 30px;
         padding: 20px;
         overflow: auto;
-        height: 250px;
+        height: 18.75em;
         border-radius: 10px;
         margin-bottom: 30px;
     }
@@ -549,7 +553,7 @@
     {
         border: 1px solid grey;
         border-radius: 10px;
-        width: 350px;
+        width: 100%;
         margin-bottom: 10px;
         height: 30px;
         display: flex;
@@ -561,7 +565,7 @@
     {
         border: 0;
         font-size: 15px;
-        width: 240px;
+        width: 100%;
         outline: none;
         height: 30px;
         border-radius: 10px;
@@ -609,7 +613,7 @@
         padding-top: 10px;
     }
 
-    .mobile .reviewsP i {color: #7372bf;}
+    .mobile .reviewsP i {color: #7372bf; font-size: 0.75em;}
     .mobile .reviewsStars {display: flex; margin-bottom: 10px;}
     .mobile .reviewsStars p {margin-left: 7px; color: gray;}
 
