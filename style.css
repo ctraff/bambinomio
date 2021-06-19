@@ -5,8 +5,6 @@
 }
 
 /* MOBILE */
-@media (min-width:10px)  
-{
     .desktop {display:none}
     .mobile {display: block;}
 
@@ -635,7 +633,7 @@
     }
 
     .mobile .reviewStar {width: 100%;}
-}
+
 
 /* DESKTOP */
 @media (min-width:1281px) 
