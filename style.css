@@ -5,7 +5,7 @@
 }
 
 /* MOBILE */
-@media (min-width:500px)  
+@media (min-width:10px)  
 {
     .desktop {display:none}
     .mobile {display: block;}
@@ -638,7 +638,7 @@
 }
 
 /* DESKTOP */
-@media (min-width:501px) 
+@media (min-width:1281px) 
 {
     .desktop {display: block;}
     .mobile {display: none;}
