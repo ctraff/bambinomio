@@ -311,8 +311,8 @@
         
     .gallery-cell 
     {
-        width: 100%;
-        height: 22em;
+        width: 95%;
+        height: 20em;
         display: -webkit-box;
         display: -webkit-flex;
         display: flex;
@@ -322,7 +322,6 @@
         justify-content: center;
         -webkit-align-items: center;
         align-items: center;
-        padding-left: 15px;
     }
     
     .gallery-cell:before 
@@ -337,8 +336,8 @@
     .gallery-cell img 
     {
         display: block;
-        width: 100%;
-        height: 100%;
+        width: 90%;
+        height: 90%;
         object-fit: contain;
         border-radius: 30px;
         border: 1px solid #D0D0D0;
@@ -421,9 +420,9 @@
         border: 0;
         cursor: pointer;
         color: white;
-        padding: 10px;
+        padding: 5px;
         border-radius: 10px;
-        width: 3.125em;
+        width: 2.5em;
     }
 
     .qtyM 
@@ -440,7 +439,7 @@
         border: 0;
         padding: 5px;
         border-radius: 10px;
-        width: 4.6875em;
+        width: 3em;
         margin-left: 10px;
     }
 
@@ -526,7 +525,7 @@
 
     .sizeChartM img 
     {
-        height: 21em;
+        width: 100%;
     }
 
     /* FAQ */
