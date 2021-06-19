@@ -5,6 +5,8 @@
 }
 
 /* MOBILE */
+@media (min-width:1px)  
+{
     .desktop {display:none}
     .mobile {display: block;}
 
@@ -633,10 +635,10 @@
     }
 
     .mobile .reviewStar {width: 100%;}
-
+}
 
 /* DESKTOP */
-@media (min-width:1281px) 
+@media (min-width:1025px) 
 {
     .desktop {display: block;}
     .mobile {display: none;}
