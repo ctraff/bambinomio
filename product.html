@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product View</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3d79046a04.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/jpg" href="images/logo.png"/>
+    <link rel="stylesheet" href="flickity-docs.css" media="screen">
+</head>
+<body>
+    <script>
+        function openTab(evt, cityName) 
+        {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+            
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) 
+            {
+                tabcontent[i].style.display = "none";
+            }
+            
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) 
+            {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        function openTabM(evt, cityName) 
+        {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+            
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontentM");
+            for (i = 0; i < tabcontent.length; i++) 
+            {
+                tabcontent[i].style.display = "none";
+            }
+            
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) 
+            {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        function colourChange(imgs) 
+        {
+            var expandImg = document.getElementById("expandedImg");
+            expandImg.src = imgs.src;
+            expandImg.parentElement.style.display = "block";
+        }
+
+        function colourChangeMobile(imgs) 
+        {
+            var expandImg = document.getElementById("mainMobile");
+            expandImg.src = imgs.src;
+            expandImg.parentElement.style.display = "block";
+
+            var c = document.getElementsByClassName("coloursMobile");
+            for (i = 0; i < c.length; i++) 
+            {
+                c[i].className = c[i].className.replace(" activeM", "");
+            }
+
+            imgs.className += " activeM";
+        }
+
+        
+    </script>
+    <script src="flickity-docs.min.js"></script>
+    <div class="desktop">    
+        <div class="banner">
+            <div class="leftBanner"></div>
+            
+            <img src="images/logo.png" class="coloursM" alt="Bambino Mio Logo">
+            
+            <div class="rightBanner">
+                <img class="lorry" src="images/lorry.png" class="coloursM" alt="Bambino Mio Logo">
+                <p>FREE DELIVERY ON ORDERS OVER £50</p>
+                <img class="email" src="images/email.png" class="coloursM" alt="Bambino Mio Logo">
+                <p>SIGN UP & RECEIVE 10% OFF YOUR FIRST ORDER</p>
+            </div>
+    
+            <nav>
+                <ul>
+                    <li>GET STARTED</li>
+                    <li>NAPPIES</li>
+                    <li>ACCESSORIES</li>
+                    <li>POTTY TRAINING</li>
+                    <li>SWIM</li>
+                </ul>
+            </nav>
+        </div>
+    
+        <div class="fixedMenu">
+            <form>
+                <div class="fm1">
+                    <img class="fixedMenuImg" src="images/product.png" class="coloursM" alt="Add to basket image">
+                    <div class="fm2">
+                        <input class="basketQty" type="text">
+                        <p>£10.99</p>
+                    </div>
+                </div>
+                <div class="fm3">
+                    <input class="basketButtonF" type="submit" value="Add to Basket">
+                </div>
+            </form>
+        </div>
+    
+        <main class="view">
+           
+            <div class="productCore">
+                <div class="imageViewer">
+    
+                </div>
+    
+                <div class="row imageViewer">
+                    <div class="column">
+                      <img src="images/product.png" class="coloursM" alt="" onclick="colourChange(this);">
+                    </div>
+                    <div class="column">
+                      <img src="images/side1.jpg" class="coloursM" alt="" onclick="colourChange(this);">
+                    </div>
+                    <div class="column">
+                      <img src="images/side2.jpg" class="coloursM" alt="" onclick="colourChange(this);">
+                    </div>
+                  </div>
+                  
+                  <!-- The expanding image container -->
+                  <div class="mainImage">              
+                    <img src="images/product.png" id="expandedImg">
+                  </div>
+        
+                <div>
+                    <p class="productTitle">MIODUO REUSABLE NAPPY COVER</p>
+                    <p class="productPrice">£10.99</p>
+                    <div class="productReviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <p>9 Reviews</p>
+                    </div>
+                    
+                    <div class="colours">
+                        <img src="images/product.png" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p2.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p3.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p4.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p5.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p6.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p7.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p8.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p9.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p10.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p5.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p2.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p3.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p4.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p5.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p6.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p7.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p8.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p9.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p10.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p5.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p2.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p3.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p4.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p5.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p6.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p7.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p8.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p9.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p10.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p5.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/p2.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                    </div>
+                    
+                    <div class="productCoreBottom">
+                        
+                        <div class="productSizes">
+                            <p>Sizes</p>
+                            <div class="sizeB">
+                                <button>One</button>
+                                <button>Two</button>
+                            </div>
+                        </div>
+                        
+                        <div class="basket">
+                            <form>
+                                <input class="basketQty" type="text">
+                                <input class="basketButton" type="submit" value="Add to Basket">
+                            </form>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+    
+            <div class="tab">
+                <button class="tablinks active" onclick="openTab(event, 'Description')">Description</button>
+                <button class="tablinks" onclick="openTab(event, 'Key_Features')">Key Features</button>
+                <button class="tablinks" onclick="openTab(event, 'Product_Care')">Product Care</button>
+                <button class="tablinks" onclick="openTab(event, 'Size_Chart')">Size Chart</button>
+              </div>
+              
+              <!-- Tab content -->
+              <div id="Description" class="tabcontent" style="display:block;">
+                <p class="descriptionMain">The mioduo nappy cover is a water resistant outer that can be used with any reusable nappy insert. Available in two sizes and is suitable to use from baby to toddler.</p>
+                
+                <ul>
+                    <li><span>mioduo cover is one part of Bambino Mio's mioduo two-piece nappy.</span></li>
+                    <li><span>Water resistant outer cover can be used with any reusable nappy insert.</span></li>
+                    <li><span>Suitable to use from baby to toddler.</span></li>
+                    <li><span>Smart protection - double leak-proof legs and waist for ultimate security.</span></li>
+                    <li><span>Wriggle proof - stretchy water resistant outer cover provides comfort for babies on the move.</span></li>
+                    <li><span>Customise - use any type of inserts inside your cover such as flat insert for newborns, foldable insert or even super soft muslin squares.</span></li>
+                    <li><span>Easy to wash and dry - wipe clean cover extremely fast drying time for quick nappy turnaround.</span></li>
+                    <li><span>Available in a range of eco-chic designs.</span></li>
+                    <li><span>Available in 2 sizes: size 1 (< 6 months), size 2 (6 months+).</span></li>
+                    <li><span>Made from 100% polyester, laminated to polyurethane.</span></li>
+                </ul>
+                <img class="descImg" src="images/desc1.png" class="coloursM" alt="Description Image">
+                <img class="descImg" src="images/desc2.png" class="coloursM" alt="Description Image">
+                <img class="descImg" src="images/desc3.jpg" class="coloursM" alt="Description Image">
+                <img class="descImg" src="images/desc4.jpg" class="coloursM" alt="Description Image">
+                <img class="descImg" src="images/desc5.jpg" class="coloursM" alt="Description Image">
+              </div>
+              
+              <div id="Key_Features" class="tabcontent">
+                  <div class="keyFeatures">
+                    <div>
+                        <img class="keyFImg" src="images/keyF1.png" class="coloursM" alt="Key Features Image">
+                        <p>TWO SIZES</p>
+                        <p>Available in two sizes that can be used with any reusable nappy insert</p>
+                    </div>
+                    <div>
+                        <img class="keyFImg" src="images/keyF2.png" class="coloursM" alt="Key Features Image">
+                        <p>TWO SIZES</p>
+                        <p>Available in two sizes that can be used with any reusable nappy insert</p>
+                    </div>
+                    <div>
+                        <img class="keyFImg" src="images/keyF3.png" class="coloursM" alt="Key Features Image">
+                        <p>TWO SIZES</p>
+                        <p>Available in two sizes that can be used with any reusable nappy insert</p>
+                    </div>
+                    <div>
+                        <img class="keyFImg" src="images/keyF4.png" class="coloursM" alt="Key Features Image">
+                        <p>TWO SIZES</p>
+                        <p>Available in two sizes that can be used with any reusable nappy insert</p>
+                    </div>
+                  </div>
+              </div>
+              
+              <div id="Product_Care" class="tabcontent">
+                  <p><b>Washing:</b>Wash before use. Machine wash with non-bio detergent up to 60°C. Do not use fabric softener. Do not use chlorine bleach. To add a boost to your washing, add a dash of laundry cleanser to your laundry.</p>
+                  <p><b>Drying:</b> Air dry away from direct heat. Can be tumble dried on a cold/low setting. Do not dry clean. Do not iron.</p>
+                  <p><b>TIP:</b> Be kind to your nappies - to get the most out of them, wash at lower temperatures. Washing at higher temperatures and frequent tumble drying can result in premature deterioration of your nappies. Download our laundry guide.</p>
+                  <img class="prodCareImg" src="images/productCare.png" class="coloursM" alt="Product Care Image">
+              </div>
+    
+              <div id="Size_Chart" class="tabcontent">
+                  <div class="sizeChart">
+                    <img class="sizeChart" src="images/sizeChart.png" class="coloursM" alt="Size Chart Image">
+                  </div>
+              </div>
+    
+    
+     
+            <div class="faq">
+                <p class="faqTitle">Product FAQ</p>
+                <form class="">
+                    <input type="text" placeholder="Search for an answer" name="search">
+                    <button type="submit">Search</button>
+                </form>
+                
+                <div class="faqContent">
+                    <p class="question">Question</p>
+                    <p class="answer">Answer</p>
+                </div>
+    
+                <div class="faqContent">
+                    <p class="question">Question</p>
+                    <p class="answer">Answer</p>
+                </div>
+    
+                <div class="faqContent">
+                    <p class="question">Question</p>
+                    <p class="answer">Answer</p>
+                </div>
+    
+                <div class="faqContent">
+                    <p class="question">Question</p>
+                    <p class="answer">Answer</p>
+                </div>
+    
+                <div class="faqContent">
+                    <p class="question">Question</p>
+                    <p class="answer">Answer</p>
+                </div>
+            </div>
+        </main>
+    
+        <div class="reviewsP">
+            <p class="faqTitle">Customer Reviews</p>
+            <div class="reviewsStars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <p>9 Reviews</p>
+            </div>
+    
+            <div class="review">
+                <div class="reviewName">
+                    <div class="reviewStar">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>Great Product - John Smith</p>
+                </div>
+                <div class="reviewContent">
+                    <p>Review, Review, Review, Review, Review, Review, Review</p>
+                </div>
+            </div>
+    
+            <div class="review">
+                <div class="reviewName">
+                    <div class="reviewStar">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>Great Product - John Smith</p>
+                </div>
+                <div class="reviewContent">
+                    <p>Review, Review, Review, Review, Review, Review, Review</p>
+                </div>
+            </div>
+    
+            <div class="review">
+                <div class="reviewName">
+                    <div class="reviewStar">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>Great Product - John Smith</p>
+                </div>
+                <div class="reviewContent">
+                    <p>Review, Review, Review, Review, Review, Review, Review</p>
+                </div>
+            </div>
+    
+            <div class="review">
+                <div class="reviewName">
+                    <div class="reviewStar">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>Great Product - John Smith</p>
+                </div>
+                <div class="reviewContent">
+                    <p>Review, Review, Review, Review, Review, Review, Review</p>
+                </div>
+            </div>
+    
+            <div class="review">
+                <div class="reviewName">
+                    <div class="reviewStar">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>Great Product - John Smith</p>
+                </div>
+                <div class="reviewContent">
+                    <p>Review, Review, Review, Review, Review, Review, Review</p>
+                </div>
+            </div>
+    
+            <div class="review">
+                <div class="reviewName">
+                    <div class="reviewStar">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>Great Product - John Smith</p>
+                </div>
+                <div class="reviewContent">
+                    <p>Review, Review, Review, Review, Review, Review, Review</p>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    
+    <div class="mobile">
+        
+        <div class="bannerM">
+            <div class="leftBannerM">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <img src="images/logo.png" class="coloursM" alt="Bambino Mio Logo">
+            
+            <div class="rightBannerM">
+                
+            </div>
+        </div>
+
+        <div class="coreInfo">
+            <p class="productTitle">MIODUO REUSABLE NAPPY COVER</p>
+            <p class="productPrice">£10.99</p>
+            <div class="productReviews">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <p>9 Reviews</p>
+            </div>
+        </div>
+    
+        <div class="gallery js-flickity">
+            <div class="gallery-cell">
+                <img id="mainMobile" src="images/product.png" class="coloursM" alt="Main image one">
+            </div>
+            <div class="gallery-cell">
+                <img src="images/side1.jpg" class="coloursM" alt="Main image two">
+            </div>
+            <div class="gallery-cell">
+                <img src="images/side2.jpg" class="coloursM" alt="Main image three">
+            </div>
+          </div>
+
+          <div class="coloursMain">
+            <div class="coloursMob">
+                <div class="coloursContainer">
+                    <img src="images/p1.jpg" class="coloursMobile activeM" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p2.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p3.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p4.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p5.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p6.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p7.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p8.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p9.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p10.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p5.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p2.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p3.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p4.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p5.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p6.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p7.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p8.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p9.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p10.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p5.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p2.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p3.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p4.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p5.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p6.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p7.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p8.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p9.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p10.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p5.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                    <img src="images/p2.jpg" class="coloursMobile" alt="Colour" onclick="colourChangeMobile(this);">
+                </div>
+            </div>
+          </div>
+
+          <div class="sizeBasket">
+              <div>
+                <p>Size</p>
+                <button>One</button>
+                <button>Two</button>
+              </div>
+
+              <div>
+                <p>Basket</p>
+                <form>
+                  <input class="qtyM" type="text">
+                  <input class="basketM" type="submit" value="Buy">
+                </form>
+              </div>  
+          </div>
+
+          <div class="tabM">
+            <button class="tablinks active" onclick="openTabM(event, 'DescriptionM')">Description</button>
+            <button class="tablinks" onclick="openTabM(event, 'Key_FeaturesM')">Key Features</button>
+            <button class="tablinks" onclick="openTabM(event, 'Product_CareM')">Product Care</button>
+            <button class="tablinks" onclick="openTabM(event, 'Size_ChartM')">Size Chart</button>
+          </div>
+          
+          <!-- Tab content -->
+          <div id="DescriptionM" class="tabcontentM" style="display:block;">
+            <p class="descriptionMainM">The mioduo nappy cover is a water resistant outer that can be used with any reusable nappy insert. Available in two sizes and is suitable to use from baby to toddler.</p>
+            
+            <ul>
+                <li><span>mioduo cover is one part of Bambino Mio's mioduo two-piece nappy.</span></li>
+                <li><span>Water resistant outer cover can be used with any reusable nappy insert.</span></li>
+                <li><span>Suitable to use from baby to toddler.</span></li>
+                <li><span>Smart protection - double leak-proof legs and waist for ultimate security.</span></li>
+                <li><span>Wriggle proof - stretchy water resistant outer cover provides comfort for babies on the move.</span></li>
+                <li><span>Customise - use any type of inserts inside your cover such as flat insert for newborns, foldable insert or even super soft muslin squares.</span></li>
+                <li><span>Easy to wash and dry - wipe clean cover extremely fast drying time for quick nappy turnaround.</span></li>
+                <li><span>Available in a range of eco-chic designs.</span></li>
+                <li><span>Available in 2 sizes: size 1 (< 6 months), size 2 (6 months+).</span></li>
+                <li><span>Made from 100% polyester, laminated to polyurethane.</span></li>
+            </ul>
+            <img class="descImgM" src="images/desc1.png" class="coloursM" alt="Description Image">
+            <img class="descImgM" src="images/desc2.png" class="coloursM" alt="Description Image">
+            <img class="descImgM" src="images/desc3.jpg" class="coloursM" alt="Description Image">
+            <img class="descImgM" src="images/desc4.jpg" class="coloursM" alt="Description Image">
+            <img class="descImgM" src="images/desc5.jpg" class="coloursM" alt="Description Image">
+          </div>
+          
+          <div id="Key_FeaturesM" class="tabcontentM">
+              <div class="keyFeaturesM">
+                <div>
+                    <img class="keyFImg" src="images/keyF1.png" class="coloursM" alt="Key Features Image">
+                    <p>TWO SIZES</p>
+                    <p>Available in two sizes that can be used with any reusable nappy insert</p>
+                </div>
+                <div>
+                    <img class="keyFImg" src="images/keyF2.png" class="coloursM" alt="Key Features Image">
+                    <p>TWO SIZES</p>
+                    <p>Available in two sizes that can be used with any reusable nappy insert</p>
+                </div>
+                <div>
+                    <img class="keyFImg" src="images/keyF3.png" class="coloursM" alt="Key Features Image">
+                    <p>TWO SIZES</p>
+                    <p>Available in two sizes that can be used with any reusable nappy insert</p>
+                </div>
+                <div>
+                    <img class="keyFImg" src="images/keyF4.png" class="coloursM" alt="Key Features Image">
+                    <p>TWO SIZES</p>
+                    <p>Available in two sizes that can be used with any reusable nappy insert</p>
+                </div>
+              </div>
+          </div>
+          
+          <div id="Product_CareM" class="tabcontentM">
+              <p><b>Washing:</b>Wash before use. Machine wash with non-bio detergent up to 60°C. Do not use fabric softener. Do not use chlorine bleach. To add a boost to your washing, add a dash of laundry cleanser to your laundry.</p>
+              <p><b>Drying:</b> Air dry away from direct heat. Can be tumble dried on a cold/low setting. Do not dry clean. Do not iron.</p>
+              <p><b>TIP:</b> Be kind to your nappies - to get the most out of them, wash at lower temperatures. Washing at higher temperatures and frequent tumble drying can result in premature deterioration of your nappies. Download our laundry guide.</p>
+              <img class="prodCareImg" src="images/productCare.png" class="coloursM" alt="Product Care Image">
+          </div>
+
+          <div id="Size_ChartM" class="tabcontentM">
+              <div class="sizeChartM">
+                <img class="sizeChart" src="images/sizeChart.png" class="coloursM" alt="Size Chart Image">
+              </div>
+          </div>
+
+          <div class="faqM">
+            <p class="faqTitleM">Product FAQ</p>
+            <form class="">
+                <input type="text" placeholder="Search for an answer" name="search">
+                <button type="submit">Search</button>
+            </form>
+            
+            <div class="faqContentM">
+                <p class="question">Question</p>
+                <p class="answer">Answer</p>
+            </div>
+
+            <div class="faqContentM">
+                <p class="question">Question</p>
+                <p class="answer">Answer</p>
+            </div>
+
+            <div class="faqContentM">
+                <p class="question">Question</p>
+                <p class="answer">Answer</p>
+            </div>
+
+            <div class="faqContentM">
+                <p class="question">Question</p>
+                <p class="answer">Answer</p>
+            </div>
+
+            <div class="faqContentM">
+                <p class="question">Question</p>
+                <p class="answer">Answer</p>
+            </div>
+        </div>
+
+        <div class="reviewsP">
+            <p class="faqTitle">Customer Reviews</p>
+            <div class="reviewsStars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <p>9 Reviews</p>
+            </div>
+
+            <div class="review">
+                <div class="reviewName">
+                    <div class="reviewStar">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>Great Product - John Smith</p>
+                </div>
+                <div class="reviewContent">
+                    <p>Review, Review, Review, Review, Review, Review, Review</p>
+                </div>
+            </div>
+
+            <div class="review">
+                <div class="reviewName">
+                    <div class="reviewStar">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>Great Product - John Smith</p>
+                </div>
+                <div class="reviewContent">
+                    <p>Review, Review, Review, Review, Review, Review, Review</p>
+                </div>
+            </div>
+
+            <div class="review">
+                <div class="reviewName">
+                    <div class="reviewStar">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>Great Product - John Smith</p>
+                </div>
+                <div class="reviewContent">
+                    <p>Review, Review, Review, Review, Review, Review, Review</p>
+                </div>
+            </div>
+
+            <div class="review">
+                <div class="reviewName">
+                    <div class="reviewStar">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>Great Product - John Smith</p>
+                </div>
+                <div class="reviewContent">
+                    <p>Review, Review, Review, Review, Review, Review, Review</p>
+                </div>
+            </div>
+
+            <div class="review">
+                <div class="reviewName">
+                    <div class="reviewStar">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>Great Product - John Smith</p>
+                </div>
+                <div class="reviewContent">
+                    <p>Review, Review, Review, Review, Review, Review, Review</p>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+    
+</body>
+</html>
