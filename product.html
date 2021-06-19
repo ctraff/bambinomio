@@ -58,11 +58,24 @@
             evt.currentTarget.className += " active";
         }
 
-        function colourChange(imgs) 
+        function colourChange1(imgs) 
         {
-            var expandImg = document.getElementById("expandedImg");
+            var fixedImg = document.getElementById("fixedImg");
+            fixedImg.src = imgs.src; 
+
+            var fixedImg = document.getElementById("smallImg");
+            fixedImg.src = imgs.src; 
+
+            var expandImg = document.getElementById("expandedImg"); 
             expandImg.src = imgs.src;
         }
+
+        function colourChange2(imgs) 
+        {
+            var expandImg = document.getElementById("expandedImg"); 
+            expandImg.src = imgs.src;
+        }
+
 
         function colourChangeMobile(imgs) 
         {
@@ -108,7 +121,7 @@
         <div class="fixedMenu">
             <form>
                 <div class="fm1">
-                    <img class="fixedMenuImg" src="images/product.png" class="coloursM" alt="Add to basket image">
+                    <img class="fixedMenuImg" id="fixedImg" src="images/product.png" class="coloursM" alt="Add to basket image">
                     <div class="fm2">
                         <input class="basketQty" type="text">
                         <p>£10.99</p>
@@ -129,13 +142,13 @@
     
                 <div class="row imageViewer">
                     <div class="column">
-                      <img src="images/product.png" class="coloursM" alt="" onclick="colourChange(this);">
+                      <img src="images/product.png" id="smallImg" class="coloursM" alt="" onclick="colourChange2(this);">
                     </div>
                     <div class="column">
-                      <img src="images/side1.jpg" class="coloursM" alt="" onclick="colourChange(this);">
+                      <img src="images/side1.jpg" class="coloursM" alt="" onclick="colourChange2(this);">
                     </div>
                     <div class="column">
-                      <img src="images/side2.jpg" class="coloursM" alt="" onclick="colourChange(this);">
+                      <img src="images/side2.jpg" class="coloursM" alt="" onclick="colourChange2(this);">
                     </div>
                   </div>
                   
@@ -157,38 +170,38 @@
                     </div>
                     
                     <div class="colours">
-                        <img src="images/product.png" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p2.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p3.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p4.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p5.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p6.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p7.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p8.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p9.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p10.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p5.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p2.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p3.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p4.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p5.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p6.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p7.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p8.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p9.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p10.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p5.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p2.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p3.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p4.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p5.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p6.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p7.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p8.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p9.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p10.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p5.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
-                        <img src="images/p2.jpg" class="coloursM" alt="Colour" onclick="colourChange(this);">
+                        <img src="images/product.png" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p2.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p3.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p4.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p5.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p6.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p7.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p8.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p9.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p10.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p5.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p2.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p3.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p4.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p5.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p6.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p7.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p8.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p9.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p10.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p5.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p2.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p3.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p4.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p5.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p6.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p7.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p8.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p9.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p10.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p5.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
+                        <img src="images/p2.jpg" class="coloursM" alt="Colour" onclick="colourChange1(this);">
                     </div>
                     
                     <div class="productCoreBottom">

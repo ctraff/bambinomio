@@ -640,7 +640,7 @@
 }
 
 /* DESKTOP */
-@media (min-width:1025px) 
+@media (min-width:900px) 
 {
     .desktop {display: block;}
     .mobile {display: none;}
